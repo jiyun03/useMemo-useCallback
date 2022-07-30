@@ -8,7 +8,6 @@ function App() {
 
   const arr = [1, 2, 3];
 
-  
   return (
     <div className="App">
       <h1>Parent: {Counter}</h1>

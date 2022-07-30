@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { isEqual } from "lodash";
 
 /*
 HOC (High Order Component) : 함수 안에 인수로 컴포넌트 함수를 넣어서 다시 새로운 컴포넌트를 반환하는 함수
@@ -14,4 +15,4 @@ const Child = (props) => {
   return <div>Child-{Counter}</div>;
 };
 
-export default memo(Child);
+export default memo(Child, isEqual);
