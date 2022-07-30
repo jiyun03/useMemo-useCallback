@@ -10,9 +10,14 @@ memo: 특정 컴포넌트를 memorization 해서(메모리 할당) 부모 컴포
 */
 
 const Child = (props) => {
-  const { Counter } = props;
+  const { Counter, updateCounter } = props;
   console.log("Child");
-  return <div>Child-{Counter}</div>;
+  return (
+    <div>
+      <h1>Child-{Counter}</h1>
+      <button onClick={updateCounter}>update</button>
+    </div>
+  );
 };
 
 export default memo(Child, isEqual);
